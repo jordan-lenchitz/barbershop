@@ -5,7 +5,7 @@ Presented as a 20-minute talk at <a href="https://www.scsmt.org/conferences/scsm
 
 Necessary modules: numpy, warnings, scipy, skimage, collections, operator
 
-fission_cands is a descriptive signal processing script based on a simple rivalry ("March Madness") model of prominence that takes a .wav file of a single chord and prints top four candidate frequencies for pitches of spectral fission in frange. Starting from a 2048-point FFT yielding spectra for .004-second samples, all relative maxima in amplitude are recursively compared to their nearest neighbor relative maxima until no more than 8 remain per sample. The top four candidates are those that remain in the most samples.
+fission_cands is a descriptive signal processing script based on a simple rivalry ("March Madness") model of prominence that takes a .wav file of a single chord and prints top four candidate frequencies for pitches of spectral fission in a given frequency range. Starting from a 2048-point FFT yielding spectra for .004-second samples, all relative maxima in amplitude are recursively compared to their nearest neighbor relative maxima until no more than 8 remain per sample. The top four candidates are those that remain in the most samples.
 
 Syntax: fission_cands(filename, frange = [1000, 3000], W = 2**11)
 filename is the .wav of the chord in question, e.g. 'my_chord.wav'

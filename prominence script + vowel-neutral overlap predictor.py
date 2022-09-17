@@ -51,7 +51,7 @@ class LinkedList:
             n = n.ref
         return count
 
-'''function that gets column indices for frequency range'''
+'''helper function that gets column indices for frequency range'''
 def col_indices(array, minf, maxf):
     j = 0
     while j<1:
